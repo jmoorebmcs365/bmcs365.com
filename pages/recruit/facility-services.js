@@ -67,7 +67,8 @@ export default function FacilityServices() {
   </div>
   <div className="cta">
     <button type="submit">Apply Now</button>
-    <a href="tel:17276273669" style={color:'var(--bm-navy)',fontWeight:700}>Call 727‑627‑3669</a>
+    <a href="tel:17276273669" style={{ color: 'var(--bm-navy)', fontWeight: 700 }}
+>Call 727‑627‑3669</a>
   </div>
   <p className="small">Prefer email? <a href="mailto:info@bmcs365.com">info@bmcs365.com</a></p>
 </form>
