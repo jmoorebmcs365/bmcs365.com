@@ -1,0 +1,1 @@
+export default function Terms(){return (<main className='mx-auto max-w-4xl px-6 section'><h1 className='text-3xl font-bold text-[var(--bm-navy)]'>Terms of Service</h1><p className='mt-4'>Add your terms here.</p></main>) }
