@@ -1,0 +1,3 @@
+[OK] Patched function response headers/body in sendQuote.js
+[OK] Patched function response headers/body in melioCheckout.js
+[OK] Patched function response headers/body in melioWebhook.js
