@@ -48,11 +48,11 @@ export default function MobileMechanics() {
     <label>Email</label>
     <input type="email" name="email" required />
   </div>
-  <div className="grid" style={gridTemplateColumns:'1fr'}>
+  <div className="grid" style={{ gridTemplateColumns: "1fr" }}>
     <label>City (Hillsborough County)</label>
     <input name="city" />
   </div>
-  <div className="grid" style={gridTemplateColumns:'1fr'}>
+  <div className="grid" style={{ gridTemplateColumns: "1fr" }}>
     <label>Years of experience</label>
     <select name="experience">
       <option value="0-1">0–1</option>
@@ -61,7 +61,7 @@ export default function MobileMechanics() {
       <option value="10+">10+</option>
     </select>
   </div>
-  <div className="grid" style={gridTemplateColumns:'1fr'}>
+  <div className="grid" style={{ gridTemplateColumns: "1fr" }}>
     <label>Tell us about your skills</label>
     <textarea name="notes" rows="4" />
   </div>
