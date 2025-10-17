@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.BMCS365.com/sitemap.xml
