@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B&M Commercial Services — Invoices</title>
+<link rel="icon" href="/assets/favicon.png"><link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A2342"><meta property="og:title" content="B&M Commercial Services — Invoices">
+<meta property="og:site_name" content="bmcs365.com"><meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bmcs365.com/invoice.html">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module" src="/assets/invoice.js"></script>
+<script src="/assets/bmcs.js"></script>
+<style>.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.stat{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:10px;padding:16px;}
+.status{padding:4px 10px;border-radius:999px;font-size:12px;border:1px solid var(--bmcs-accent);}
+.status-paid{background:var(--bmcs-primary);color:var(--bmcs-white);border-color:var(--bmcs-primary);}
+.status-overdue{background:#B03A2E;color:#fff;border:none;}
+.status-draft{background:rgba(176,183,195,.18);color:var(--bmcs-primary);}
+table{width:100%;border-collapse:collapse;background:#fff;}th,td{padding:10px 12px;border-bottom:1px solid #eef1f5;text-align:left;}
+thead th{background:#f7f8fa;}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;}input,select{padding:8px;border:1px solid #cdd3db;border-radius:8px;}
+</style>  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script type="module" src="/assets/pdf.js"></script>
+  <link rel="stylesheet" href="/assets/brand-fixes.css">
+  <script>const pref=localStorage.getItem("bmcs-theme");if(!pref||pref==="dark"){document.documentElement.classList.add("dark");}</script>
+  <script type="module" src="/assets/invoiceLineItems.js"></script>
+</head>
+<body>
+<header class="navbar"><div style="max-width:1024px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 12px;">
+<img src="/assets/bmcs-logo-light.png" alt="B&M Commercial Services" style="height:36px">
+<nav style="margin-left:auto;display:flex;gap:14px"><a href="/index.html">Home</a><a href="/pipeline.html">Pipeline</a><a href="/automations.html">Automations</a><strong><a href="/invoice.html">Invoices</a></strong><a href="/login.html">Login</a></nav>
+</div></header>
+<main style="max-width:1024px;margin:24px auto;padding:0 12px;">
+<h1 style="margin:8px 0;">Invoices</h1>
+<div class="grid"><div class="stat"><div>Total Invoices</div><div id="kpi-total" style="font-size:28px;font-weight:700">—</div></div>
+<div class="stat"><div>Paid %</div><div id="kpi-paid-pct" style="font-size:28px;font-weight:700">—</div></div>
+<div class="stat"><div>Outstanding</div><div id="kpi-outstanding" style="font-size:28px;font-weight:700">—</div></div></div>
+<section class="panel" style="margin:18px 0;padding:16px;border:1px solid rgba(0,0,0,.08);border-radius:10px;">
+<h3 style="margin-top:0;">Create Invoice</h3>
+<div class="toolbar"><button id="btn-melio" class="btn-primary" type="button">Create Melio Pay Link</button><button id="btn-pdf" class="btn-primary" type="button">Download PDF</button><input id="inv-client" placeholder="Client Name" required><input id="inv-amount" placeholder="Amount (e.g., 250.00)" required>
+<select id="inv-status"><option value="draft">Draft</option><option value="sent">Sent</option><option value="paid">Paid</option><option value="overdue">Overdue</option></select>
+<button id="btn-create" class="btn-primary">Create Invoice</button><button id="btn-send" class="btn-primary">Send via Email</button><button id="btn-simulate" class="btn-primary">Simulate Melio Pay</button></div>
+<pre id="inv-output" style="background:#f7f8fa;border:1px solid #e5e7eb;border-radius:8px;padding:12px;overflow:auto;max-height:220px"></pre></section>
+<table id="inv-table"><thead><tr><th>Client</th><th>Amount</th><th>Status</th><th>Created</th></tr></thead><tbody></tbody></table>
+</main></body></html>

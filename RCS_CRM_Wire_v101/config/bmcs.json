@@ -1,0 +1,26 @@
+{
+  "legal_name": "B & M Global Enterprise LLC",
+  "dba": "B & M Commercial Services LLC",
+  "ein": "39-4791041",
+  "domain": "www.BMCS365.com",
+  "primary_email": "info@bmcommercial.com",
+  "phone": "(813) 486-8195",
+  "address_primary": "4612 E Broadway Ave, Tampa, FL 33605",
+  "address_hq": "4510 Broadway Blvd SE, Albuquerque, NM 87105",
+  "founders": [
+    "Corey Brown",
+    "James S. Moore IV"
+  ],
+  "naics": [
+    "561720",
+    "238990",
+    "811111",
+    "541618"
+  ],
+  "colors": {
+    "navy": "#0A2342",
+    "silver": "#B0B7C3",
+    "white": "#FFFFFF",
+    "black": "#000000"
+  }
+}

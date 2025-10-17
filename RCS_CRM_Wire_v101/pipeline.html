@@ -1,0 +1,101 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>B&M Commercial Services</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:title" content="B&M Commercial Services">
+    <meta property="og:site_name" content="bmcs365.com">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bmcs365.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="/assets/bmcs.js"></script>
+
+  <meta name="theme-color" content="#0A2342">
+  <link rel="stylesheet" href="/assets/brand-fixes.css">
+  <script>const pref=localStorage.getItem("bmcs-theme");if(!pref||pref==="dark"){document.documentElement.classList.add("dark");}</script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="logo-mark"></div> B&M Commercial Services CRM</div>
+    <nav class="nav">
+      <a href="./index.html">Dashboard</a>
+      <a class="active" href="./pipeline.html">Pipeline</a>
+      <a href="./automations.html">Automations</a>
+      <a href="#">Appointments</a>
+      <a href="#">Dialer</a>
+      <a href="#">Reports</a>
+            <a href="/invoice.html">Invoices</a>
+      </nav>
+  </aside>
+  <div class="content">
+    <div class="topbar">
+      <div><strong>Pipeline Board</strong></div>
+      <div class="top-actions">
+        <div class="theme-toggle" title="Toggle theme"><div class="dot"></div></div>
+        <button class="btn" onclick="location.href='./automations.html'">Go to Automations</button>
+      </div>
+    </div>
+
+    <div class="kanban">
+      <div class="column"><h4>Prospect</h4>
+        <div class="deal">Office Park A · $1,900</div>
+        <div class="deal">Warehouse 22 · $3,600</div>
+      </div>
+      <div class="column"><h4>Qualified</h4>
+        <div class="deal">Greystar Tampa · $12,500</div>
+      </div>
+      <div class="column"><h4>Proposal</h4>
+        <div class="deal">City Clinic · $2,100</div>
+      </div>
+      <div class="column"><h4>Closed</h4>
+        <div class="deal">Revive HQ · $9,800</div>
+      </div>
+    </div>
+    <div class="footer-note">Tip: Press and hold a deal to see the ghost-slide animation.</div>
+  </div>
+</div>
+
+<!-- Shay -->
+<div class="shay-orb" title="Shay">R</div>
+<div class="shay-bubble">
+  <div class="wm">B&M Commercial Services · VA Shay</div>
+  <div class="msg">Drag a deal forward to move through stages.</div>
+  <div class="actions"></div>
+</div>
+<div class="tooltip-arrow"></div>
+
+<script>
+  window.SHAY_STEPS = [
+    {
+      text: "Try moving a deal — press and hold to see the ghost slide.",
+      actions: [{ label: "Got it", onClick: ()=>{} }],
+      highlight: ".deal"
+    },
+    {
+      text: "Great. Next up, let’s build a simple Welcome Campaign.",
+      actions: [{ label: "Go to Automations", onClick: ()=> location.href="./automations.html" }],
+      highlight: ".top-actions .btn"
+    }
+  ];
+</script>
+<script src="./assets/app.js"></script>
+<footer class="bmcs-footer">
+  <div class="bmcs-wrap">
+    <img src="/assets/bmcs-logo-light.png" alt="B&M Commercial Services" class="bmcs-footer-logo"/>
+    <div>
+      © 2025 B & M Global Enterprise LLC d/b/a B&M Commercial Services · EIN 39-4791041 ·
+      <a href="https://www.bmcs365.com">bmcs365.com</a><br/>
+      4612 E Broadway Ave, Tampa, FL 33605 · (813) 486-8195 · <a href="mailto:info@bmcommercial.com">info@bmcommercial.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>B&M Commercial Services | Client Portal</title>
+  <link rel="manifest" href="/site.webmanifest"><link rel="icon" href="/assets/favicon.png">
+  <meta name="theme-color" content="#0A2342">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+  <script type="module" src="/assets/pdf.js"></script>
+  <script type="module" src="/assets/portal.js"></script>
+  <link rel="stylesheet" href="/assets/brand-fixes.css">
+  <script>const pref=localStorage.getItem("bmcs-theme");if(!pref||pref==="dark"){document.documentElement.classList.add("dark");}</script>
+</head>
+<body>
+  <header class="portal-header panel" style="text-align:center;padding:16px;margin:0 0 12px 0;">
+    <h1 style="margin:0;">B&M Commercial Services | Client Portal</h1>
+  </header>
+  <main id="portal">
+    <section class="panel">
+      <h2>Invoice #<span id="inv-id"></span></h2>
+      <div id="inv-details"></div>
+      <table id="line-items">
+        <thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th>Tax</th><th>Total</th></tr></thead>
+        <tbody></tbody>
+        <tfoot><tr><th colspan="4" style="text-align:right">Grand Total</th><th id="grand">$0.00</th></tr></tfoot>
+      </table>
+      <div style="display:flex;gap:10px;margin-top:12px;">
+        <button id="btn-pay" class="btn btn-primary">Pay Now</button>
+        <button id="btn-download" class="btn btn-secondary">Download PDF</button>
+      </div>
+    </section>
+    <footer style="opacity:.9;margin:24px 0;text-align:center;color:#B0B7C3">
+      © 2025 B&M Global Enterprise LLC d/b/a B&M Commercial Services · bmcs365.com
+    </footer>
+  </main>
+</body>
+</html>

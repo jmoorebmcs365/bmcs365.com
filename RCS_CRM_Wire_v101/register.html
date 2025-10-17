@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B&M — Register</title>
+<link rel="icon" href="/assets/favicon.png"><link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A2342"><link rel="stylesheet" href="/assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script type="module">
+import { getSupabase } from "/lib/supabase.js";
+const supabase=getSupabase();
+window.addEventListener("DOMContentLoaded",()=>{
+  const form=document.getElementById("reg-form"); const out=document.getElementById("reg-out");
+  form.addEventListener("submit",async(e)=>{e.preventDefault();const email=(new FormData(form)).get("email");
+    if(!supabase){ out.textContent="Supabase not configured"; return; }
+    const { error } = await supabase.auth.signUp({ email });
+    out.textContent = error ? error.message : "Registration email sent.";
+  });
+});
+</script>
+  <script src="/assets/bmcs.js"></script>
+  <link rel="stylesheet" href="/assets/brand-fixes.css">
+  <script>const pref=localStorage.getItem("bmcs-theme");if(!pref||pref==="dark"){document.documentElement.classList.add("dark");}</script>
+</head><body>
+<header class="navbar"><div style="max-width:720px;margin:0 auto;padding:10px 12px;">
+<img src="/assets/bmcs-logo-light.png" alt="B&M Commercial Services" style="height:36px"></div></header>
+<main style="max-width:720px;margin:24px auto;padding:0 12px;">
+<h1>Register</h1>
+<form id="reg-form" class="panel" style="padding:16px;border:1px solid rgba(0,0,0,.08);border-radius:10px;">
+<input name="email" type="email" placeholder="you@company.com" required style="padding:10px;border:1px solid #cdd3db;border-radius:8px;width:100%;max-width:420px;">
+<div style="margin-top:12px;"><button class="btn-primary">Register</button></div>
+</form>
+<pre id="reg-out" style="background:#f7f8fa;border:1px solid #e5e7eb;border-radius:8px;padding:12px;margin-top:12px;"></pre>
+</main></body></html>

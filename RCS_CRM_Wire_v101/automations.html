@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>B&M Commercial Services</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+
+    <link rel="icon" href="/assets/favicon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:title" content="B&M Commercial Services">
+    <meta property="og:site_name" content="bmcs365.com">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bmcs365.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <script src="/assets/bmcs.js"></script>
+
+  <meta name="theme-color" content="#0A2342">
+  <link rel="stylesheet" href="/assets/brand-fixes.css">
+  <script>const pref=localStorage.getItem("bmcs-theme");if(!pref||pref==="dark"){document.documentElement.classList.add("dark");}</script>
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="logo"><div class="logo-mark"></div> B&M Commercial Services CRM</div>
+    <nav class="nav">
+      <a href="./index.html">Dashboard</a>
+      <a href="./pipeline.html">Pipeline</a>
+      <a class="active" href="./automations.html">Automations</a>
+      <a href="#">Appointments</a>
+      <a href="#">Dialer</a>
+      <a href="#">Reports</a>
+            <a href="/invoice.html">Invoices</a>
+      </nav>
+  </aside>
+  <div class="content">
+    <div class="topbar">
+      <div><strong>Automation Builder</strong></div>
+      <div class="top-actions">
+        <div class="theme-toggle" title="Toggle theme"><div class="dot"></div></div>
+        <button class="btn" onclick="location.href='./index.html'">Back to Dashboard</button>
+      </div>
+    </div>
+
+    <div class="builder">
+      <div class="pane">
+        <h4>Triggers</h4>
+        <div class="node trigger">Lead Created</div>
+        <div class="node trigger">Form Submitted</div>
+        <div class="node trigger">Appointment Booked</div>
+      </div>
+
+      <div class="pane">
+        <div class="canvas" id="canvas">
+          <div class="chip" style="left:30px; top:30px;">Trigger · Lead Created</div>
+          <div class="chip" style="left:240px; top:120px;">Action · Send SMS</div>
+          <div class="chip" style="left:420px; top:210px;">Wait · 1 day</div>
+          <div class="chip" style="left:590px; top:300px;">Action · Send Email</div>
+          <div class="chip" style="left:770px; top:300px;">Success</div>
+        </div>
+      </div>
+
+      <div class="pane">
+        <h4>Actions</h4>
+        <div class="node action">Send SMS</div>
+        <div class="node action">Send Email</div>
+        <div class="node wait">Wait</div>
+        <div class="node success">Success</div>
+      </div>
+    </div>
+    <div class="footer-note">Tap a node in the canvas to see the snap glow.</div>
+  </div>
+</div>
+
+<!-- Shay -->
+<div class="shay-orb" title="Shay">R</div>
+<div class="shay-bubble">
+  <div class="wm">B&M Commercial Services · VA Shay</div>
+  <div class="msg">Build a simple Welcome Campaign: Lead Created → Send SMS → Wait 1 day → Send Email → Success.</div>
+  <div class="actions"></div>
+</div>
+<div class="tooltip-arrow"></div>
+
+<script>
+  window.SHAY_STEPS = [
+    {
+      text: "Tap a node to preview the snap glow on the canvas.",
+      actions: [{ label: "Okay", onClick: ()=>{} }],
+      highlight: ".canvas .chip:nth-child(2)"
+    },
+    {
+      text: "That’s it! You’ve got the basic flow. Return to the Dashboard when ready.",
+      actions: [{ label: "Back to Dashboard", onClick: ()=> location.href="./index.html" }],
+      highlight: ".top-actions .btn"
+    }
+  ];
+</script>
+<script src="./assets/app.js"></script>
+<footer class="bmcs-footer">
+  <div class="bmcs-wrap">
+    <img src="/assets/bmcs-logo-light.png" alt="B&M Commercial Services" class="bmcs-footer-logo"/>
+    <div>
+      © 2025 B & M Global Enterprise LLC d/b/a B&M Commercial Services · EIN 39-4791041 ·
+      <a href="https://www.bmcs365.com">bmcs365.com</a><br/>
+      4612 E Broadway Ave, Tampa, FL 33605 · (813) 486-8195 · <a href="mailto:info@bmcommercial.com">info@bmcommercial.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

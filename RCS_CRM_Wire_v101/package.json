@@ -1,0 +1,12 @@
+{
+  "name": "bmcs-crm",
+  "private": true,
+  "version": "3.5.0",
+  "description": "B&M CRM v3 (Supabase + Invoicing)",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "@sendgrid/mail": "^8.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
