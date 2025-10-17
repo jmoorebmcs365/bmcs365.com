@@ -1,0 +1,14 @@
+{
+  "name": "bm-commercial-services",
+  "private": true,
+  "version": "3.6.1",
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "postbuild": "next-sitemap",
+    "dev": "next dev"
+  },
+  "devDependencies": {
+    "next-sitemap": "^4.2.3"
+  }
+}
